@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f9f8">
+  <meta name="description" content="CricScore mobile scoring prototype">
+  <title>CricScore | Match scoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="#live" aria-label="CricScore home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>Cric<span class="brand-light">Score</span></span>
+      </a>
+      <div class="header-tools">
+        <span class="prototype-pill"><span class="status-dot"></span> SAMPLE</span>
+        <button class="avatar-button" data-page="profile" aria-label="Open profile">AR</button>
+      </div>
+    </header>
+
+    <main id="app-content" tabindex="-1"></main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item" data-page="home"><span class="nav-icon icon-home" aria-hidden="true"></span><span>Home</span></button>
+      <button class="nav-item is-active" data-page="live"><span class="nav-icon icon-live" aria-hidden="true"></span><span>Live</span></button>
+      <button class="nav-item" data-page="tournaments"><span class="nav-icon icon-trophy" aria-hidden="true"></span><span>Tournaments</span></button>
+      <button class="nav-item" data-page="teams"><span class="nav-icon icon-team" aria-hidden="true"></span><span>Teams</span></button>
+      <button class="nav-item" data-page="profile"><span class="nav-icon icon-profile" aria-hidden="true"></span><span>Profile</span></button>
+    </nav>
+  </div>
+
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden>
+    <section class="bottom-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div id="sheet-content"></div>
+    </section>
+  </div>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
